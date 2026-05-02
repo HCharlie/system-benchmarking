@@ -1,0 +1,36 @@
+{
+  "architecture": "arm64",
+  "cache": {
+    "l1d_bytes": 65536,
+    "l1i_bytes": 131072,
+    "l2_bytes": 8388608,
+    "line_bytes": 128,
+    "page_bytes": 16384
+  },
+  "captured_at": "2026-05-02T22:37:14Z",
+  "chip": "Apple M5 Max",
+  "cpu": {
+    "efficiency_cores": 12,
+    "logical_cores": 18,
+    "performance_cores": 6,
+    "total_cores": 18
+  },
+  "gpu": {
+    "cores": 40,
+    "metal_family": "spdisplays_metal4",
+    "name": "Apple M5 Max"
+  },
+  "marketing_name": "MacBook Pro",
+  "memory_bytes": 68719476736,
+  "model_id": "Mac17,7",
+  "os": {
+    "build": "25E253",
+    "kernel": "Darwin 25.4.0",
+    "name": "macOS",
+    "version": "26.4.1"
+  },
+  "raw": {},
+  "schema_version": "1",
+  "slug": "macbook-pro-apple-m5-max",
+  "vendor": "apple"
+}

@@ -32,6 +32,7 @@ class RawResultSchemaTests(unittest.TestCase):
                     "chip": "Apple M3 Max",
                     "architecture": "arm64",
                     "memory_gb": 36,
+                    "manifest_ref": None,
                 },
                 "environment": {"os": "macOS", "os_version": "15.0"},
                 "benchmark": {"family": "cpu", "name": "scalar_integer", "version": "0.1"},

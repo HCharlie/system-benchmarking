@@ -35,21 +35,31 @@ uv run system-benchmark list
 
 ```text
 system-benchmarking/
-├── benchmarks/
+├── benchmarks/         # benchmark descriptions, vendored sources
 │   ├── cpu/
 │   ├── gpu/
 │   ├── memory/
-│   └── system/
-├── devices/
+│   ├── system/
+│   ├── disk/
+│   └── network/
+├── devices/            # captured device manifests per machine
 │   └── apple/
+├── profiles/           # YAML/TOML run profiles (quick, full, ...)
 ├── results/
-│   ├── raw/
-│   ├── processed/
-│   └── reports/
+│   ├── raw/            # immutable raw JSON results
+│   ├── processed/      # normalized summaries
+│   └── reports/        # generated Markdown / HTML
 ├── scripts/
 ├── src/
 │   └── system_benchmarking/
+│       ├── adapters/   # parsers/wrappers for external tools (fio, iperf3, ...)
+│       ├── benchmarks/ # Benchmark subclasses
+│       ├── collectors/ # platform-specific device capture (apple, linux, ...)
+│       ├── reports/
+│       ├── results/
+│       └── runner/
 └── docs/
+    └── getting-started-macbook.md  # ← start here
 ```
 
 ## Result Layout

@@ -1,5 +1,15 @@
 """Apple platform collectors."""
 
-from system_benchmarking.collectors.apple.device_info import collect_apple_device_info
+from system_benchmarking.collectors.apple.device_info import (
+    MANIFEST_SCHEMA_VERSION,
+    collect_apple_device_info,
+    collect_apple_device_manifest,
+    slugify,
+)
 
-__all__ = ["collect_apple_device_info"]
+__all__ = [
+    "MANIFEST_SCHEMA_VERSION",
+    "collect_apple_device_info",
+    "collect_apple_device_manifest",
+    "slugify",
+]
