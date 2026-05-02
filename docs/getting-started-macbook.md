@@ -297,14 +297,14 @@ After phases 1–6 working:
 - [x] Phase 0 — Tooling installed, `uv run system-benchmark list` works
 - [x] Phase 1 — Device JSON captured for this mac (`devices/apple/macbook-pro-apple-m5-max.json`)
 - [x] Phase 2 — STREAM wrapper wired (build script, adapter, runner, tests). Run on real machine to populate `results/raw/`.
-- [ ] Phase 3 — Markdown report generated from raw JSON
-- [ ] Phase 4 — sysbench + stress-ng + own scalar bench
-- [ ] Phase 5 — Latency curve plotted
-- [ ] Phase 6 — fio with 3 profiles
-- [ ] Phase 7 — iperf3 loopback (+ real second machine)
-- [ ] Phase 8 — Metal capability + 1 compute kernel
-- [ ] Phase 9 — Power/thermal time series under sustained load
-- [ ] Phase 10 — `just bench-quick` works end-to-end
+- [x] Phase 3 — Markdown report generator (`system-benchmark report`)
+- [x] Phase 4 — sysbench + stress-ng + native scalar wrappers + tests
+- [x] Phase 5 — tinymembench + native pointer-chase wrappers + tests
+- [x] Phase 6 — fio adapter + 3 profiles (`profiles/disk/`)
+- [x] Phase 7 — iperf3 + ping adapters + tests
+- [x] Phase 8 — Metal capability probe (compute kernel = future Swift skeleton, see `benchmarks/gpu/compute/metal/README.md`)
+- [x] Phase 9 — powermetrics adapter (sudo required at run time)
+- [x] Phase 10 — `justfile` (bench-quick / bench-full), profiles/quick.yaml + full.yaml, GitHub Actions CI for fixture tests
 
 ---
 

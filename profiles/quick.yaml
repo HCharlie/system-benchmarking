@@ -1,0 +1,15 @@
+# Quick benchmark profile (about 2-3 minutes).
+# Used by `just bench-quick`. Treat as documentation; the justfile is the
+# real source of truth until a YAML-driven runner is wired up.
+name: quick
+description: Smoke test for one machine. Skips long disk + power phases.
+iterations:
+  stream: 5
+  sysbench: 1
+  scalar: 3
+benchmarks:
+  - capture-device
+  - stream
+  - sysbench
+  - scalar
+  - metal-probe

@@ -1,0 +1,25 @@
+# Full benchmark profile (about 30-60 minutes).
+# Used by `just bench-full`. Documentation only until YAML-driven runner is wired up.
+name: full
+description: Multi-family sweep. Caller is responsible for AC power, idle background, ambient temp.
+iterations:
+  stream: 10
+  sysbench: 3
+  stress-ng: 3
+  scalar: 5
+  pointer-chase: 1
+benchmarks:
+  - capture-device
+  - stream
+  - sysbench
+  - stress-ng
+  - scalar
+  - pointer-chase
+  - fio:profiles/disk/seq-read-1m.fio
+  - fio:profiles/disk/rand-read-4k-qd32.fio
+  - fio:profiles/disk/rand-write-4k-qd1.fio
+  - metal-probe
+notes: |
+  - powermetrics is excluded by default because it needs sudo. Run separately:
+      sudo -E just run-powermetrics 120
+  - iperf3 needs a target; run loopback or against a peer machine separately.

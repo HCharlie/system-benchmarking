@@ -1,0 +1,23 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# CI runners share hardware with countless other jobs. Their *absolute*
+# benchmark numbers are useless. We use CI only to catch parser, schema, and
+# runner regressions on fixture data. Real numbers come from running on a
+# specific machine and committing the JSON under devices/ + results/.
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: latest
+      - name: Sync deps
+        run: uv sync
+      - name: Run tests
+        run: uv run python -m unittest discover -s tests -v

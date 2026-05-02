@@ -1,0 +1,16 @@
+; Sequential read profile: 1 MiB blocks, single thread, 30 seconds.
+; Use this to measure sustained sequential bandwidth.
+[global]
+ioengine=posixaio
+direct=0
+runtime=30
+time_based=1
+group_reporting=1
+size=4G
+filename_format=$jobname.dat
+
+[seq-read-1m]
+rw=read
+bs=1M
+iodepth=8
+numjobs=1
