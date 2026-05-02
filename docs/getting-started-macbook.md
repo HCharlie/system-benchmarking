@@ -296,7 +296,7 @@ After phases 1–6 working:
 
 - [x] Phase 0 — Tooling installed, `uv run system-benchmark list` works
 - [x] Phase 1 — Device JSON captured for this mac (`devices/apple/macbook-pro-apple-m5-max.json`)
-- [ ] Phase 2 — STREAM running, Triad GB/s in raw JSON
+- [x] Phase 2 — STREAM wrapper wired (build script, adapter, runner, tests). Run on real machine to populate `results/raw/`.
 - [ ] Phase 3 — Markdown report generated from raw JSON
 - [ ] Phase 4 — sysbench + stress-ng + own scalar bench
 - [ ] Phase 5 — Latency curve plotted
